@@ -63,27 +63,25 @@ cd data/
 head -n 5 co2_emissions_2022.csv
 ```
 
-```bash
-# TODO: a command that prints just the first 5 lines of the raw file
-```
-
 **Output:**
-_TODO: paste what you actually got_
+country,iso_code,year,population,gdp,co2
+Afghanistan,AFG,2022,40578847,53303471617,10.170
+Africa,,2022,1445862695,,1459.114
+Africa (GCP),,2022,,,1459.103
+Albania,ALB,2022,2827614,36171005594,4.498
 
-**What I notice:** _TODO — your raw observations, in your own words_
-
+**What I notice:** I notice it produces the first 5 rows of the csv file.
 ## 2. Column names
 
 Next you want to see just the column names by themselves — one per line is
 a lot easier to scan than one long comma-separated row.
 
 ```bash
-# TODO: a command (or combination of commands) that prints just the header
-# row, one column name per line
+head -n1 co2_emissions_2022.csv
 ```
 
 **Output:**
-_TODO_
+country,iso_code,year,population,gdp,co2
 
 ## 3. Column-by-column data type table
 
@@ -93,8 +91,11 @@ row. Column numbers for reference: `country`=1, `iso_code`=2, `year`=3,
 `population`=4, `gdp`=5, `co2`=6.
 
 ```bash
-# TODO: a command that prints the first 6 values from a single column
-# (repeat this for at least 5 of the 6 columns, swapping in each column's number)
+head -n6 co2_emissions_2022.csv | cut -d ',' -f1 
+head -n6 co2_emissions_2022.csv | cut -d ',' -f2 
+head -n6 co2_emissions_2022.csv | cut -d ',' -f3 
+head -n6 co2_emissions_2022.csv | cut -d ',' -f4 
+head -n6 co2_emissions_2022.csv | cut -d ',' -f5 
 ```
 
 Fill in the table from what you actually saw — not a guess from the column
@@ -102,24 +103,25 @@ name alone:
 
 | Column | Inferred type | How I can tell |
 |---|---|---|
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
+| country | string | It's a text value. |
+| iso_code | string | It is a text value. |
+| year| integer | It is a whole number that can be manipulated. |
+| population | integer | It is a whole number that can be manipulated. |
+| gdp | integer | It is a whole number that can be manipulated. |
+| co2 | float | It is a decimal number that can be manipulated. |
 
 **In your own words:** what's the actual difference between a list/array
 and a table? (Not a definition you looked up — explain it the way you'd
 explain it to a friend who's never coded. No command needed for this one,
 just think about the table you just filled in above.)
 
-_TODO_
+A list is line of values typically seperated by commas. A table is a an arrange of data typically structured by rows and columns.
 
 ## 4. Structured or unstructured?
 
 State whether this dataset is structured or unstructured, and why.
 
-_TODO_
+It's structued because it consists of values arranged with consistent data types.
 
 ## 5. Before you trust this data
 
@@ -131,8 +133,7 @@ You may need more than one command for this — piping (`|`) feeds one
 command's output into the next as input.
 
 ```bash
-# TODO: a command (or combination) that counts how many rows have a
-# BLANK iso_code
+
 ```
 
 **Output:**
