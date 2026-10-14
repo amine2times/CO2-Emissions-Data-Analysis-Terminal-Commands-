@@ -133,26 +133,28 @@ You may need more than one command for this — piping (`|`) feeds one
 command's output into the next as input.
 
 ```bash
-
+awk -F',' '$2 == ""'  co2_emissions_2022.csv > missing_iso.csv
+wc -l missing_iso.csv
 ```
 
 **Output:**
-_TODO_
+36 missing_iso.csv
 
 ```bash
-# TODO: the same idea, but for the gdp column
+awk -F',' '$5 == ""'  co2_emissions_2022.csv > missing_gdp.csv
+wc -l missing_gdp.csv
 ```
 
 **Output:**
-_TODO_
+89 missing_gdp.csv
 
 List **at least 2** specific things you'd want to know about how this
 dataset was collected, before trusting any conclusion drawn from it — ground
 at least one in the counts you just found.
 
 **My 2 concerns:**
-1. _TODO_
-2. _TODO_
+1. Why is there so many missing data values?
+2. Why are there continents under countries?
 
 ## 6. Data-quality question for the source
 
@@ -161,7 +163,7 @@ phrase it as a real question you'd send to the data's source/maintainer. A
 good test: could they actually answer it with a concrete yes/no or fact —
 not "is this data good?"
 
-_TODO_
+
 
 ## 7. Something you're actually curious about
 
