@@ -163,7 +163,7 @@ phrase it as a real question you'd send to the data's source/maintainer. A
 good test: could they actually answer it with a concrete yes/no or fact —
 not "is this data good?"
 
-
+Is the data of the continents an aggreagation of the countries apart of them? 
 
 ## 7. Something you're actually curious about
 
