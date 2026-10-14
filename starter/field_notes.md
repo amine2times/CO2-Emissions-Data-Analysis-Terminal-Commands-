@@ -173,14 +173,15 @@ curious to explore using this data? Pick two specific countries you're
 curious to compare, and look up their full rows.
 
 ```bash
-# TODO: a command that finds a specific country's row by name (repeat for
-# a second country of your choice)
+grep "Austria" co2_emissions_2022.csv
+grep "Nepal" co2_emissions_2022.csv
+
 ```
 
 **Output:**
-_TODO_
-
-**My question:** _TODO_
+Austria,AUT,2022,9064678,398815419150,61.454
+Nepal,NPL,2022,29715435,95965910597,17.609
+**My question:** Does GDP have a correlation to co2.
 
 ## 8. AI-literacy reflection
 
@@ -191,10 +192,10 @@ fact before relying on it professionally — specific enough that you could
 actually follow it, not "I'll be careful."
 
 **Risks:**
-1. _TODO_
-2. _TODO_
+1. It may not differeiate the countries vs continents due to the data quality. I would make sure it's acurately repersenting the data correctly by checking the steps it's taking. 
+2. It may not factor in the blanks so would double check the calculations of what the AI is doing to be sure it accounts for blanks.
 
-**My rule:** _TODO_
+**My rule:** Double check all the steps AI is taking to be sure it's doing the right proccesses.
 
 ## 9. Something that went wrong (and how you figured it out)
 
@@ -205,10 +206,11 @@ this at least once. Paste the actual command and what actually happened
 fix — not "I googled it and it worked."
 
 ```bash
-# TODO: a command that errored, or gave you unexpected results
+grep "bangladesh" co2_emissions_2022.csv 
 ```
 
 **What happened:**
-_TODO: the actual error message, or the unexpected output you got_
+Didn'produce anything.
 
-**What it told me and how I fixed it:** _TODO_
+**What it told me and how I fixed it:**
+Checked the spelling and realized "bangladesh" needs to be capitalized to "Bangladesh"
